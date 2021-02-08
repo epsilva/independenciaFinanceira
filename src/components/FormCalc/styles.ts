@@ -22,4 +22,10 @@ export const Column = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 4px;
+
+  @media only screen and (max-width: 600px) {
+    label {
+      font-size: 14px;
+    }
+  }
 `

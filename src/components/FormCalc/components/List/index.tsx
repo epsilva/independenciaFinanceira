@@ -21,7 +21,7 @@ interface Column {
 
 const columns: Column[] = [
   { id: 'mes', label: 'Mês', minWidth: 20 },
-  { id: 'rendimento', label: 'Rendimento (R$)', minWidth: 100 },
+  { id: 'rendimento', label: 'Rendimento (R$)', minWidth: 170 },
   {
     id: 'valorInicial',
     label: 'Valor Inicial (R$)',
@@ -30,7 +30,7 @@ const columns: Column[] = [
   },
   {
     id: 'aporteFinal',
-    label: 'Aporte Final',
+    label: 'Aporte Final (R$)',
     minWidth: 170,
     format: (value: number) => value.toLocaleString('pt-Br')
   }

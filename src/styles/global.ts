@@ -29,14 +29,6 @@ input {
       border: 2px solid red;
   }
 
-  .money:before {
-    content: 'R$';
-    position: absolute;
-    top: 0;
-    left: 40px;
-    z-index: 1;
-  }
-
   p {
     color: #000;
     text-align: center;
