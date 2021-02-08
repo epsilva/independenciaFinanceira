@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead'
 import TablePagination from '@material-ui/core/TablePagination'
 import TableRow from '@material-ui/core/TableRow'
 import { Container } from './styles'
+import { IStateLista } from '../../../types'
 
 interface Column {
   id: 'mes' | 'rendimento' | 'valorInicial' | 'aporteFinal'
@@ -20,24 +21,26 @@ interface Column {
 
 const columns: Column[] = [
   { id: 'mes', label: 'Mês', minWidth: 20 },
-  { id: 'redimento', label: 'Rendimento (R$)', minWidth: 100 },
+  { id: 'rendimento', label: 'Rendimento (R$)', minWidth: 100 },
   {
     id: 'valorInicial',
     label: 'Valor Inicial (R$)',
     minWidth: 170,
-    align: 'left',
     format: (value: number) => value.toLocaleString('pt-Br')
   },
   {
     id: 'aporteFinal',
     label: 'Aporte Final',
     minWidth: 170,
-    align: 'left',
     format: (value: number) => value.toLocaleString('pt-Br')
   }
 ]
 
-const List: React.FC = props => {
+interface Props {
+  lista: IStateLista[]
+}
+
+const List: React.FC<Props> = ({ lista }: Props) => {
   const [page, setPage] = React.useState(0)
   const [rowsPerPage, setRowsPerPage] = React.useState(10)
 
@@ -54,7 +57,7 @@ const List: React.FC = props => {
 
   return (
     <Container>
-      {props.lista.length > 0 && (
+      {lista.length > 0 && (
         <Paper style={{ width: '100%' }}>
           <TableContainer>
             <Table stickyHeader aria-label="sticky table">
@@ -72,12 +75,12 @@ const List: React.FC = props => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {props.lista
+                {lista
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((row, idx) => {
                     return (
                       <TableRow hover role="checkbox" tabIndex={-1} key={idx}>
-                        <TableCell key={idx}>{idx + 1}</TableCell>
+                        <TableCell key={idx}>{row.mes}</TableCell>
                         <TableCell key={idx}>
                           {row.rendimento.toLocaleString('pt-br', {
                             style: 'currency',

@@ -11,7 +11,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
       <GlobalStyle />
-      {routes().Router.router?.asPath !== '/login' && <Header />}
+      {new routes().Router.router?.asPath !== '/login' && <Header />}
     </ThemeProvider>
   )
 }

@@ -17,7 +17,13 @@ export interface IFormInput {
 }
 
 export interface IStateLista {
+  mes: number
   valorInicial: number
   rendimento: number
   aporteFinal: number
+}
+
+export interface IStateDetalhe {
+  totalRendimento: string
+  total: string
 }

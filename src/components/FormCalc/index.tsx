@@ -9,25 +9,18 @@ import { IStateLista, IFormInput } from '../types'
 const FormCalc: React.FC = () => {
   const [lista, setLista] = useState<IStateLista[]>([])
   const [aporteMensal, setAporteMensal] = useState('0,00')
-  const [loading, setLoading] = useState(true)
-  const {
-    control,
-    handleSubmit,
-    register,
-    setValue,
-    errors,
-    getValues
-  } = useForm<IFormInput>()
+  const { handleSubmit, register, setValue, errors, getValues } = useForm<
+    IFormInput
+  >()
 
   const onSubmit = (data: IFormInput) => {
-    setLoading(true)
-    const redimentoMensal = parseFloat(
-      (1 + parseFloat(data.rendimentoAnual) / 100) ** (1 / 12) - 1
-    )
-    const listaTemp = []
+    const redimentoMensal: number =
+      (1 + data.rendimentoAnual / 100) ** (1 / 12) - 1
+    const listaTemp: IStateLista[] = []
     for (let i = 0; i < 360; i++) {
       if (i === 0) {
         listaTemp.push({
+          mes: i + 1,
           rendimento: 0,
           valorInicial: 0,
           aporteFinal: parseFloat(
@@ -38,26 +31,27 @@ const FormCalc: React.FC = () => {
         const aporteMe = parseFloat(
           aporteMensal.toString().replace('.', '').replace(',', '.')
         )
-        const rendimentoAtual = parseFloat(
+        const rendimentoAtual: number =
           listaTemp[i - 1].aporteFinal * redimentoMensal
-        )
         listaTemp.push({
+          mes: i + 1,
           valorInicial: listaTemp[i - 1].aporteFinal,
           rendimento: rendimentoAtual,
           aporteFinal: aporteMe + listaTemp[i - 1].aporteFinal + rendimentoAtual
         })
       }
     }
+    console.log(listaTemp)
     setLista(listaTemp)
-    setLoading(false)
   }
 
   function calcAporteMensal() {
-    const salarioMensal = parseFloat(
+    const salarioMensal: number = parseFloat(
       getValues('salarioMensal').toString().replace('.', '').replace(',', '.')
     )
-    const percentualAporte = parseInt(getValues('percentualAporte')) / 100
-    const aporteMensal = parseFloat(percentualAporte * salarioMensal)
+    const percentualAporte: number =
+      parseInt(getValues('percentualAporte').toString()) / 100
+    const aporteMensal: number = percentualAporte * salarioMensal
 
     if (aporteMensal) {
       setAporteMensal(maskMoney((aporteMensal * 100).toString()))
@@ -131,8 +125,12 @@ const FormCalc: React.FC = () => {
         <input type="submit" value="Calcular" />
         <input type="button" value="Limpar" onClick={onChangeLimpar} />
       </Container>
-      <Cards lista={lista} />
-      <List lista={lista} loading={loading} />
+      {lista.length > 0 && (
+        <>
+          <Cards lista={lista} />
+          <List lista={lista} />
+        </>
+      )}
     </form>
   )
 }

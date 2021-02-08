@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport * as React from 'react';\nimport { HeaderContainer } from './styles';\n\nconst Header = () => __jsx(HeaderContainer, null, __jsx(\"h2\", null, \"Independ\\xEAncia Financeira\"), __jsx(\"div\", {\n  className: \"avatar\"\n}));\n\nexport default Header;","map":null,"metadata":{},"sourceType":"module"}
