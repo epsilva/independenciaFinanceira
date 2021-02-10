@@ -5,7 +5,7 @@ import { Container } from '../styles/pages/Home'
 const Home: React.FC = () => {
   return (
     <Container>
-      <FormCalc />
+      <h2>Home</h2>
     </Container>
   )
 }

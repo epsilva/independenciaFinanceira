@@ -25,6 +25,16 @@ export const Li = styled(motion.li)`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  div.outline {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    border: 10px solid white;
+    border-radius: 4px;
+  }
 `
 
 export const Nav = styled(motion.nav)<Styled>`
@@ -36,6 +46,7 @@ export const Nav = styled(motion.nav)<Styled>`
 
   ul {
     position: ${props => (props.openNav ? 'absolute' : 'initial')};
+    display: ${props => (props.openNav ? 'block' : 'none')};
   }
 
   .background {
@@ -45,12 +56,14 @@ export const Nav = styled(motion.nav)<Styled>`
     bottom: 0;
     width: 300px;
     background: #fff;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   }
 `
 
 export const Ul = styled(motion.ul)`
   padding: 25px;
-  /* position: absolute; */
   top: 100px;
   width: 100%;
 `

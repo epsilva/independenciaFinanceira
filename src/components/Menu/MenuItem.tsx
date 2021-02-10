@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { IconPaceHolder, TextPlaceHolder, Li } from './styles'
+import Link from 'next/link'
 
 const variants = {
   open: {
@@ -29,8 +30,12 @@ export const MenuItem = ({ menu }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <IconPaceHolder style={style} />
-      <TextPlaceHolder style={style}>{menu.titulo}</TextPlaceHolder>
+      <Link href={menu.rota}>
+        <IconPaceHolder style={style} />
+      </Link>
+      <Link href={menu.rota}>
+        <TextPlaceHolder>{menu.titulo}</TextPlaceHolder>
+      </Link>
     </Li>
   )
 }
