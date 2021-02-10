@@ -14,7 +14,7 @@ const variants = {
 export const Navigation = ({ toggle }) => (
   <Ul variants={variants}>
     {itemIds.map(menu => (
-      <div onClick={toggle}>
+      <div onClick={toggle} key={menu.id}>
         <MenuItem menu={menu} key={menu.id} />
       </div>
     ))}

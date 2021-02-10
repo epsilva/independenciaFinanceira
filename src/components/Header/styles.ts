@@ -10,12 +10,12 @@ export const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   border-radius: 0px;
-  background: #ffffff;
+  background: #4154b3;
   box-shadow: 1px 1px 8px #000;
 
   h2 {
-    margin-left: 50px;
-    color: #000;
+    margin-left: 60px;
+    color: #fff;
   }
 
   .date {
