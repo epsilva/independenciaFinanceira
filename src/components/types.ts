@@ -22,6 +22,9 @@ export interface IStateLista {
   rendimento: number
   aporteFinal: number
 }
+export interface Styled {
+  openNav: boolean
+}
 
 export interface IStateDetalhe {
   totalRendimento: string

@@ -4,6 +4,7 @@ import { useDimensions } from './use-dimensions'
 import { MenuToggle } from './MenuToggle'
 import { Navigation } from './Navigation'
 import { Nav } from './styles'
+import { Styled } from '../types'
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -25,27 +26,25 @@ const sidebar = {
   }
 }
 
-const Menu: React.FC = () => {
+const Menu: React.FC<Styled> = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
-  const [open, setOpen] = useState(false)
+  const [styled, setStyled] = useState<Styled>({ openNav: false })
 
   useEffect(() => {
     if (!isOpen) {
       setTimeout(() => {
-        setOpen(isOpen)
+        setStyled({ openNav: isOpen })
       }, 1000)
     } else {
-      setOpen(isOpen)
+      setStyled({ openNav: isOpen })
     }
   }, [isOpen])
 
   return (
     <Nav
-      style={{
-        position: isOpen ? 'inherit' : 'absolute'
-      }}
+      openNav={styled.openNav}
       initial={false}
       animate={isOpen ? 'open' : 'closed'}
       custom={height}
