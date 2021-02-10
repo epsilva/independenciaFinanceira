@@ -42,7 +42,7 @@ interface Props {
 
 const List: React.FC<Props> = ({ lista }: Props) => {
   const [page, setPage] = React.useState(0)
-  const [rowsPerPage, setRowsPerPage] = React.useState(10)
+  const [rowsPerPage, setRowsPerPage] = React.useState(12)
 
   const handleChangePage = (event: unknown, newPage: number) => {
     setPage(newPage)
@@ -106,7 +106,7 @@ const List: React.FC<Props> = ({ lista }: Props) => {
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[10, 25, 100]}
+            rowsPerPageOptions={[12, 24, 120]}
             component="div"
             count={360}
             rowsPerPage={rowsPerPage}

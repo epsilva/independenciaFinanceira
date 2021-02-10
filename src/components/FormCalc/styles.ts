@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding-top: 12px;
+  padding: 12px;
   display: flex;
   width: 100%;
   align-items: center;
   flex-direction: column;
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow: 1px 1px 8px #000;
 `
 
 export const Row = styled.div`
@@ -23,7 +26,7 @@ export const Column = styled.div`
   flex-direction: column;
   margin: 4px;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 900px) {
     label {
       font-size: 14px;
     }

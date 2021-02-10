@@ -4,12 +4,19 @@ export const HeaderContainer = styled.header`
   border-bottom: 1px solid var(--divider);
   position: fixed;
   padding: 0 20px;
-  height: 60px;
+  height: 80px;
   display: flex;
   align-items: center;
   top: 0;
   width: 100%;
-  background: black;
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow: 1px 1px 8px #000;
+
+  h2 {
+    margin-left: 50px;
+    color: #000;
+  }
 
   .date {
     color: var(--secondary);

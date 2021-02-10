@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const Container = styled.div.withConfig({\n  displayName: \"Home__Container\",\n  componentId: \"heizgz-0\"\n})([\"width:100%;flex:1 1 100%;padding:45px 8px;display:flex;flex-direction:column;height:10vh;position:relative;\"]);","map":null,"metadata":{},"sourceType":"module"}

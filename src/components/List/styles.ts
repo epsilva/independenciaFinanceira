@@ -7,7 +7,7 @@ export const CardList = styled.ul`
     list-style: none;
     padding:  0 10%;
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 800px) {
         padding: 0;
     }
 `;

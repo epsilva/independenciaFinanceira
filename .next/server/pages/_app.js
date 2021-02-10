@@ -93,108 +93,400 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/components/Header/index.tsx":
-/*!*****************************************!*\
-  !*** ./src/components/Header/index.tsx ***!
-  \*****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles */ \"./src/components/Header/styles.ts\");\nvar _jsxFileName = \"/Users/esdraspinheiro/Documents/Projetos/next-independencia-financeira/src/components/Header/index.tsx\";\nvar __jsx = react__WEBPACK_IMPORTED_MODULE_0__[\"createElement\"];\n\n\n\nconst Header = () => __jsx(_styles__WEBPACK_IMPORTED_MODULE_1__[\"HeaderContainer\"], {\n  __self: undefined,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 7,\n    columnNumber: 3\n  }\n}, __jsx(\"h2\", {\n  __self: undefined,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 8,\n    columnNumber: 5\n  }\n}, \"Independ\\xEAncia Financeira\"), __jsx(\"div\", {\n  className: \"avatar\",\n  __self: undefined,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 9,\n    columnNumber: 5\n  }\n}));\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Header);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9IZWFkZXIvaW5kZXgudHN4P2FlZWIiXSwibmFtZXMiOlsiSGVhZGVyIl0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTtBQUVBOztBQUdBLE1BQU1BLE1BQU0sR0FBRyxNQUNiLE1BQUMsdURBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxHQUNFO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUNBREYsRUFFRTtBQUFLLFdBQVMsRUFBQyxRQUFmO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFGRixDQURGOztBQU9lQSxxRUFBZiIsImZpbGUiOiIuL3NyYy9jb21wb25lbnRzL0hlYWRlci9pbmRleC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tICdyZWFjdCdcbmltcG9ydCB7IEF2YXRhciB9IGZyb20gJ3JlYWN0LWxvcmVtLWlwc3VtJ1xuaW1wb3J0IHsgSGVhZGVyQ29udGFpbmVyIH0gZnJvbSAnLi9zdHlsZXMnXG5pbXBvcnQgUGluaGEgZnJvbSAnLi4vLi4vYXNzZXRzL3BpbmhhLnN2ZydcblxuY29uc3QgSGVhZGVyID0gKCkgPT4gKFxuICA8SGVhZGVyQ29udGFpbmVyPlxuICAgIDxoMj5JbmRlcGVuZMOqbmNpYSBGaW5hbmNlaXJhPC9oMj5cbiAgICA8ZGl2IGNsYXNzTmFtZT1cImF2YXRhclwiPjwvZGl2PlxuICA8L0hlYWRlckNvbnRhaW5lcj5cbilcblxuZXhwb3J0IGRlZmF1bHQgSGVhZGVyXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/components/Header/index.tsx\n");
-
-/***/ }),
-
-/***/ "./src/components/Header/styles.ts":
-/*!*****************************************!*\
-  !*** ./src/components/Header/styles.ts ***!
-  \*****************************************/
-/*! exports provided: HeaderContainer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"HeaderContainer\", function() { return HeaderContainer; });\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);\n\nconst HeaderContainer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.header.withConfig({\n  displayName: \"styles__HeaderContainer\",\n  componentId: \"sc-14v2o85-0\"\n})([\"border-bottom:1px solid var(--divider);position:fixed;padding:0 20px;height:60px;display:flex;align-items:center;top:0;width:100%;background:black;.date{color:var(--secondary);font-size:14px;text-transform:uppercase;}.avatar{background:var(--divider);border-radius:50%;position:absolute;bottom:12px;right:0;overflow:hidden;margin-right:20px;}.avatar,.avatar img{width:40px;height:40px;}.imagem{height:40px;margin-right:8px;svg{fill:#fff;width:40px;height:40px;}}\"]);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvY29tcG9uZW50cy9IZWFkZXIvc3R5bGVzLnRzPzYyM2UiXSwibmFtZXMiOlsiSGVhZGVyQ29udGFpbmVyIiwic3R5bGVkIiwiaGVhZGVyIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBRU8sTUFBTUEsZUFBZSxHQUFHQyx3REFBTSxDQUFDQyxNQUFWO0FBQUE7QUFBQTtBQUFBLHNkQUFyQiIsImZpbGUiOiIuL3NyYy9jb21wb25lbnRzL0hlYWRlci9zdHlsZXMudHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgc3R5bGVkIGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuXG5leHBvcnQgY29uc3QgSGVhZGVyQ29udGFpbmVyID0gc3R5bGVkLmhlYWRlcmBcbiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHZhcigtLWRpdmlkZXIpO1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHBhZGRpbmc6IDAgMjBweDtcbiAgaGVpZ2h0OiA2MHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDAlO1xuICBiYWNrZ3JvdW5kOiBibGFjaztcblxuICAuZGF0ZSB7XG4gICAgY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gICAgZm9udC1zaXplOiAxNHB4O1xuICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIH1cblxuICAuYXZhdGFyIHtcbiAgICBiYWNrZ3JvdW5kOiB2YXIoLS1kaXZpZGVyKTtcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMTJweDtcbiAgICByaWdodDogMDtcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgIG1hcmdpbi1yaWdodDogMjBweDtcbiAgfVxuXG4gIC5hdmF0YXIsXG4gIC5hdmF0YXIgaW1nIHtcbiAgICB3aWR0aDogNDBweDtcbiAgICBoZWlnaHQ6IDQwcHg7XG4gIH1cblxuICAuaW1hZ2VtIHtcbiAgICBoZWlnaHQ6IDQwcHg7XG4gICAgbWFyZ2luLXJpZ2h0OiA4cHg7XG4gICAgc3ZnIHtcbiAgICAgIGZpbGw6ICNmZmY7XG4gICAgICB3aWR0aDogNDBweDtcbiAgICAgIGhlaWdodDogNDBweDtcbiAgICB9XG4gIH1cbmBcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/components/Header/styles.ts\n");
-
-/***/ }),
-
-/***/ "./src/pages/_app.tsx":
-/*!****************************!*\
-  !*** ./src/pages/_app.tsx ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Header */ \"./src/components/Header/index.tsx\");\n/* harmony import */ var _styles_global__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../styles/global */ \"./src/styles/global.ts\");\n/* harmony import */ var _styles_theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/theme */ \"./src/styles/theme.ts\");\n/* harmony import */ var next_routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-routes */ \"next-routes\");\n/* harmony import */ var next_routes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_routes__WEBPACK_IMPORTED_MODULE_5__);\nvar _jsxFileName = \"/Users/esdraspinheiro/Documents/Projetos/next-independencia-financeira/src/pages/_app.tsx\";\nvar __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;\n\nfunction _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }\n\n\n\n\n\n\n\n\nconst MyApp = ({\n  Component,\n  pageProps\n}) => {\n  var _routes$Router$router;\n\n  return __jsx(styled_components__WEBPACK_IMPORTED_MODULE_1__[\"ThemeProvider\"], {\n    theme: _styles_theme__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n    __self: undefined,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 11,\n      columnNumber: 5\n    }\n  }, __jsx(Component, _extends({}, pageProps, {\n    __self: undefined,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 12,\n      columnNumber: 7\n    }\n  })), __jsx(_styles_global__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n    __self: undefined,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 13,\n      columnNumber: 7\n    }\n  }), ((_routes$Router$router = new next_routes__WEBPACK_IMPORTED_MODULE_5___default.a().Router.router) === null || _routes$Router$router === void 0 ? void 0 : _routes$Router$router.asPath) !== '/login' && __jsx(_components_Header__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    __self: undefined,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 14,\n      columnNumber: 59\n    }\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MyApp);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvcGFnZXMvX2FwcC50c3g/ODU0OCJdLCJuYW1lcyI6WyJNeUFwcCIsIkNvbXBvbmVudCIsInBhZ2VQcm9wcyIsInRoZW1lIiwicm91dGVzIiwiUm91dGVyIiwicm91dGVyIiwiYXNQYXRoIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7QUFBQTtBQUVBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUEsTUFBTUEsS0FBeUIsR0FBRyxDQUFDO0FBQUVDLFdBQUY7QUFBYUM7QUFBYixDQUFELEtBQThCO0FBQUE7O0FBQzlELFNBQ0UsTUFBQywrREFBRDtBQUFlLFNBQUssRUFBRUMscURBQXRCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsS0FDRSxNQUFDLFNBQUQsZUFBZUQsU0FBZjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEtBREYsRUFFRSxNQUFDLHNEQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsSUFGRixFQUdHLDhCQUFJRSxrREFBSixHQUFhQyxNQUFiLENBQW9CQyxNQUFwQixnRkFBNEJDLE1BQTVCLE1BQXVDLFFBQXZDLElBQW1ELE1BQUMsMERBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxJQUh0RCxDQURGO0FBT0QsQ0FSRDs7QUFVZVAsb0VBQWYiLCJmaWxlIjoiLi9zcmMvcGFnZXMvX2FwcC50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlRWZmZWN0IH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgeyBBcHBQcm9wcyB9IGZyb20gJ25leHQvYXBwJ1xuaW1wb3J0IHsgVGhlbWVQcm92aWRlciB9IGZyb20gJ3N0eWxlZC1jb21wb25lbnRzJ1xuaW1wb3J0IEhlYWRlciBmcm9tICcuLi9jb21wb25lbnRzL0hlYWRlcidcbmltcG9ydCBHbG9iYWxTdHlsZSBmcm9tICcuLi9zdHlsZXMvZ2xvYmFsJ1xuaW1wb3J0IHRoZW1lIGZyb20gJy4uL3N0eWxlcy90aGVtZSdcbmltcG9ydCByb3V0ZXMgZnJvbSAnbmV4dC1yb3V0ZXMnXG5cbmNvbnN0IE15QXBwOiBSZWFjdC5GQzxBcHBQcm9wcz4gPSAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9KSA9PiB7XG4gIHJldHVybiAoXG4gICAgPFRoZW1lUHJvdmlkZXIgdGhlbWU9e3RoZW1lfT5cbiAgICAgIDxDb21wb25lbnQgey4uLnBhZ2VQcm9wc30gLz5cbiAgICAgIDxHbG9iYWxTdHlsZSAvPlxuICAgICAge25ldyByb3V0ZXMoKS5Sb3V0ZXIucm91dGVyPy5hc1BhdGggIT09ICcvbG9naW4nICYmIDxIZWFkZXIgLz59XG4gICAgPC9UaGVtZVByb3ZpZGVyPlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IE15QXBwXG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/pages/_app.tsx\n");
-
-/***/ }),
-
-/***/ "./src/styles/global.ts":
-/*!******************************!*\
-  !*** ./src/styles/global.ts ***!
-  \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ \"styled-components\");\n/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (styled_components__WEBPACK_IMPORTED_MODULE_0__[\"createGlobalStyle\"]`\n  * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\nbody {\n    background: ${props => props.theme.colors.background};\n    color: ${props => props.theme.colors.text};\n    font: 400 16px Roboto, sans-serif;\n    height: 100vh;\n}\n\ninput {\n    display: block;\n    box-sizing: border-box;\n    width: 100%;\n    border-radius: 4px;\n    border: 1px solid white;\n    padding: 10px 15px;\n    margin-bottom: 10px;\n    font-size: 14px;\n    position: relative;\n  }\n  .inpt-error {\n      border: 2px solid red;\n  }\n\n  p {\n    color: #000;\n    text-align: center;\n  }\n\n#root {\n    display: flex;\n    justify-content: center;\n  }\n\n  .sp-error {\n    color: red;\n  }\n`);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL2dsb2JhbC50cz9iYTcxIl0sIm5hbWVzIjpbImNyZWF0ZUdsb2JhbFN0eWxlIiwicHJvcHMiLCJ0aGVtZSIsImNvbG9ycyIsImJhY2tncm91bmQiLCJ0ZXh0Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUFBO0FBQUE7QUFBQTtBQUVlQSxrSUFBa0I7Ozs7Ozs7O2tCQVFmQyxLQUFLLElBQUlBLEtBQUssQ0FBQ0MsS0FBTixDQUFZQyxNQUFaLENBQW1CQyxVQUFXO2FBQzVDSCxLQUFLLElBQUlBLEtBQUssQ0FBQ0MsS0FBTixDQUFZQyxNQUFaLENBQW1CRSxJQUFLOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Q0FUOUMiLCJmaWxlIjoiLi9zcmMvc3R5bGVzL2dsb2JhbC50cy5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNyZWF0ZUdsb2JhbFN0eWxlIH0gZnJvbSAnc3R5bGVkLWNvbXBvbmVudHMnXG5cbmV4cG9ydCBkZWZhdWx0IGNyZWF0ZUdsb2JhbFN0eWxlYFxuICAqIHtcbiAgICBtYXJnaW46IDA7XG4gICAgcGFkZGluZzogMDtcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufVxuXG5ib2R5IHtcbiAgICBiYWNrZ3JvdW5kOiAke3Byb3BzID0+IHByb3BzLnRoZW1lLmNvbG9ycy5iYWNrZ3JvdW5kfTtcbiAgICBjb2xvcjogJHtwcm9wcyA9PiBwcm9wcy50aGVtZS5jb2xvcnMudGV4dH07XG4gICAgZm9udDogNDAwIDE2cHggUm9ib3RvLCBzYW5zLXNlcmlmO1xuICAgIGhlaWdodDogMTAwdmg7XG59XG5cbmlucHV0IHtcbiAgICBkaXNwbGF5OiBibG9jaztcbiAgICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB3aGl0ZTtcbiAgICBwYWRkaW5nOiAxMHB4IDE1cHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMTBweDtcbiAgICBmb250LXNpemU6IDE0cHg7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICB9XG4gIC5pbnB0LWVycm9yIHtcbiAgICAgIGJvcmRlcjogMnB4IHNvbGlkIHJlZDtcbiAgfVxuXG4gIHAge1xuICAgIGNvbG9yOiAjMDAwO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgfVxuXG4jcm9vdCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgfVxuXG4gIC5zcC1lcnJvciB7XG4gICAgY29sb3I6IHJlZDtcbiAgfVxuYFxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/styles/global.ts\n");
-
-/***/ }),
-
-/***/ "./src/styles/theme.ts":
-/*!*****************************!*\
-  !*** ./src/styles/theme.ts ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst theme = {\n  colors: {\n    background: '#121214',\n    text: '#e1e1e6',\n    primary: '#8257e6'\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (theme);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvc3R5bGVzL3RoZW1lLnRzPzk0Y2UiXSwibmFtZXMiOlsidGhlbWUiLCJjb2xvcnMiLCJiYWNrZ3JvdW5kIiwidGV4dCIsInByaW1hcnkiXSwibWFwcGluZ3MiOiJBQUFBO0FBQUEsTUFBTUEsS0FBSyxHQUFHO0FBQ1pDLFFBQU0sRUFBRTtBQUNOQyxjQUFVLEVBQUUsU0FETjtBQUVOQyxRQUFJLEVBQUUsU0FGQTtBQUdOQyxXQUFPLEVBQUU7QUFISDtBQURJLENBQWQ7QUFRZUosb0VBQWYiLCJmaWxlIjoiLi9zcmMvc3R5bGVzL3RoZW1lLnRzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiY29uc3QgdGhlbWUgPSB7XG4gIGNvbG9yczoge1xuICAgIGJhY2tncm91bmQ6ICcjMTIxMjE0JyxcbiAgICB0ZXh0OiAnI2UxZTFlNicsXG4gICAgcHJpbWFyeTogJyM4MjU3ZTYnXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgdGhlbWVcbiJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/styles/theme.ts\n");
-
-/***/ }),
-
 /***/ 0:
-/*!*****************************************!*\
-  !*** multi private-next-pages/_app.tsx ***!
-  \*****************************************/
-/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! private-next-pages/_app.tsx */"./src/pages/_app.tsx");
+module.exports = __webpack_require__("hUgY");
 
 
 /***/ }),
 
-/***/ "next-routes":
-/*!******************************!*\
-  !*** external "next-routes" ***!
-  \******************************/
-/*! no static exports found */
+/***/ "90Kz":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"next-routes\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJuZXh0LXJvdXRlc1wiPzBkNGYiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoibmV4dC1yb3V0ZXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJuZXh0LXJvdXRlc1wiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///next-routes\n");
+module.exports = require("next-routes");
 
 /***/ }),
 
-/***/ "react":
-/*!************************!*\
-  !*** external "react" ***!
-  \************************/
-/*! no static exports found */
+/***/ "Dtiu":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"react\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJyZWFjdFwiPzU4OGUiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoicmVhY3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJyZWFjdFwiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///react\n");
+module.exports = require("styled-components");
 
 /***/ }),
 
-/***/ "styled-components":
-/*!************************************!*\
-  !*** external "styled-components" ***!
-  \************************************/
-/*! no static exports found */
+/***/ "cDcd":
 /***/ (function(module, exports) {
 
-eval("module.exports = require(\"styled-components\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vZXh0ZXJuYWwgXCJzdHlsZWQtY29tcG9uZW50c1wiP2Y1YWQiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEiLCJmaWxlIjoic3R5bGVkLWNvbXBvbmVudHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJtb2R1bGUuZXhwb3J0cyA9IHJlcXVpcmUoXCJzdHlsZWQtY29tcG9uZW50c1wiKTsiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///styled-components\n");
+module.exports = require("react");
+
+/***/ }),
+
+/***/ "hUgY":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: external "styled-components"
+var external_styled_components_ = __webpack_require__("Dtiu");
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
+
+// CONCATENATED MODULE: ./src/components/Header/styles.ts
+
+const HeaderContainer = external_styled_components_default.a.header.withConfig({
+  displayName: "styles__HeaderContainer",
+  componentId: "sc-14v2o85-0"
+})(["border-bottom:1px solid var(--divider);position:fixed;padding:0 20px;height:80px;display:flex;align-items:center;top:0;width:100%;border-radius:0px;background:#ffffff;box-shadow:1px 1px 8px #000;h2{margin-left:50px;color:#000;}.date{color:var(--secondary);font-size:14px;text-transform:uppercase;}.avatar{background:var(--divider);border-radius:50%;position:absolute;bottom:12px;right:0;overflow:hidden;margin-right:20px;}.avatar,.avatar img{width:40px;height:40px;}.imagem{height:40px;margin-right:8px;svg{fill:#fff;width:40px;height:40px;}}"]);
+// EXTERNAL MODULE: external "framer-motion"
+var external_framer_motion_ = __webpack_require__("wmQq");
+
+// CONCATENATED MODULE: ./src/components/Menu/use-dimensions.tsx
+ // Naive implementation - in reality would want to attach
+// a window or resize listener. Also use state/layoutEffect instead of ref/effect
+// if this is important to know on initial client render.
+// It would be safer to  return null for unmeasured states.
+
+const useDimensions = ref => {
+  const dimensions = Object(external_react_["useRef"])({
+    width: 0,
+    height: 0
+  });
+  Object(external_react_["useEffect"])(() => {
+    dimensions.current.width = ref.current.offsetWidth;
+    dimensions.current.height = ref.current.offsetHeight;
+  }, []);
+  return dimensions.current;
+};
+// CONCATENATED MODULE: ./src/components/Menu/styles.js
+
+
+const Container = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__Container",
+  componentId: "sc-9otgl4-0"
+})([""]);
+const IconPaceHolder = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__IconPaceHolder",
+  componentId: "sc-9otgl4-1"
+})(["width:40px;height:40px;border-radius:50%;flex:40px 0;margin-right:20px;"]);
+const TextPlaceHolder = external_styled_components_default.a.div.withConfig({
+  displayName: "styles__TextPlaceHolder",
+  componentId: "sc-9otgl4-2"
+})(["border-radius:5px;width:100%;flex:1;color:#000;"]);
+const Li = external_styled_components_default()(external_framer_motion_["motion"].li).withConfig({
+  displayName: "styles__Li",
+  componentId: "sc-9otgl4-3"
+})(["list-style:none;margin-bottom:20px;display:flex;align-items:center;cursor:pointer;"]);
+const Nav = external_styled_components_default()(external_framer_motion_["motion"].nav).withConfig({
+  displayName: "styles__Nav",
+  componentId: "sc-9otgl4-4"
+})(["top:0;left:0;bottom:0;width:300px;.background{position:inherit;top:0;left:0;bottom:0;width:300px;background:#fff;}"]);
+const Ul = external_styled_components_default()(external_framer_motion_["motion"].ul).withConfig({
+  displayName: "styles__Ul",
+  componentId: "sc-9otgl4-5"
+})(["padding:25px;position:absolute;top:100px;width:100%;"]);
+const Button = external_styled_components_default.a.button.withConfig({
+  displayName: "styles__Button",
+  componentId: "sc-9otgl4-6"
+})(["outline:none;border:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;cursor:pointer;position:absolute;top:18px;left:15px;width:50px;height:50px;border-radius:50%;background:transparent;"]);
+// CONCATENATED MODULE: ./src/components/Menu/MenuToggle.tsx
+var __jsx = external_react_default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+
+
+const Path = props => __jsx(external_framer_motion_["motion"].path, _extends({
+  fill: "transparent",
+  strokeWidth: "3",
+  stroke: "hsl(0, 0%, 18%)",
+  strokeLinecap: "round"
+}, props));
+
+const MenuToggle = ({
+  toggle
+}) => __jsx(Button, {
+  onClick: toggle
+}, __jsx("svg", {
+  width: "23",
+  height: "23",
+  viewBox: "0 0 23 23"
+}, __jsx(Path, {
+  variants: {
+    closed: {
+      d: 'M 2 2.5 L 20 2.5'
+    },
+    open: {
+      d: 'M 3 16.5 L 17 2.5'
+    }
+  }
+}), __jsx(Path, {
+  d: "M 2 9.423 L 20 9.423",
+  variants: {
+    closed: {
+      opacity: 1
+    },
+    open: {
+      opacity: 0
+    }
+  },
+  transition: {
+    duration: 0.1
+  }
+}), __jsx(Path, {
+  variants: {
+    closed: {
+      d: 'M 2 16.346 L 20 16.346'
+    },
+    open: {
+      d: 'M 3 2.5 L 17 16.346'
+    }
+  }
+})));
+// CONCATENATED MODULE: ./src/components/Menu/MenuItem.tsx
+var MenuItem_jsx = external_react_default.a.createElement;
+
+
+const variants = {
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: {
+        stiffness: 1000,
+        velocity: -100
+      }
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: {
+        stiffness: 1000
+      }
+    }
+  }
+};
+const colors = ['#FF008C', '#D309E1', '#9C1AFF', '#7700FF', '#4400FF'];
+const MenuItem = ({
+  menu
+}) => {
+  const style = {
+    border: `2px solid ${colors[menu.id]}`
+  };
+  return MenuItem_jsx(Li, {
+    variants: variants,
+    whileHover: {
+      scale: 1.1
+    },
+    whileTap: {
+      scale: 0.95
+    }
+  }, MenuItem_jsx(IconPaceHolder, {
+    style: style
+  }), MenuItem_jsx(TextPlaceHolder, {
+    style: style
+  }, menu.titulo));
+};
+// CONCATENATED MODULE: ./src/components/Menu/Navigation.tsx
+var Navigation_jsx = external_react_default.a.createElement;
+
+
+
+const Navigation_variants = {
+  open: {
+    transition: {
+      staggerChildren: 0.07,
+      delayChildren: 0.2
+    }
+  },
+  closed: {
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1
+    }
+  }
+};
+const Navigation = () => Navigation_jsx(Ul, {
+  variants: Navigation_variants
+}, itemIds.map(menu => Navigation_jsx(MenuItem, {
+  menu: menu,
+  key: menu.id
+})));
+const itemIds = [{
+  id: 1,
+  rota: '/',
+  titulo: 'Independência Financeira'
+}];
+// CONCATENATED MODULE: ./src/components/Menu/index.tsx
+var Menu_jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: 'spring',
+      stiffness: 20,
+      restDelta: 2
+    }
+  }),
+  closed: {
+    clipPath: 'circle(30px at 40px 40px)',
+    transition: {
+      delay: 0.5,
+      type: 'spring',
+      stiffness: 400,
+      damping: 40
+    }
+  }
+};
+
+const Menu = () => {
+  const [isOpen, toggleOpen] = Object(external_framer_motion_["useCycle"])(false, true);
+  const containerRef = Object(external_react_["useRef"])(null);
+  const {
+    height
+  } = useDimensions(containerRef);
+  const {
+    0: open,
+    1: setOpen
+  } = Object(external_react_["useState"])(false);
+  Object(external_react_["useEffect"])(() => {
+    if (!isOpen) {
+      setTimeout(() => {
+        setOpen(isOpen);
+      }, 1000);
+    } else {
+      setOpen(isOpen);
+    }
+  }, [isOpen]);
+  return Menu_jsx(Nav, {
+    style: {
+      position: isOpen ? 'inherit' : 'absolute'
+    },
+    initial: false,
+    animate: isOpen ? 'open' : 'closed',
+    custom: height,
+    ref: containerRef
+  }, Menu_jsx(external_framer_motion_["motion"].div, {
+    className: "background",
+    variants: sidebar
+  }), Menu_jsx(Navigation, null), Menu_jsx(MenuToggle, {
+    toggle: () => toggleOpen()
+  }));
+};
+
+/* harmony default export */ var components_Menu = (Menu);
+// CONCATENATED MODULE: ./src/components/Header/index.tsx
+var Header_jsx = external_react_["createElement"];
+
+
+
+
+const Header = () => Header_jsx(HeaderContainer, null, Header_jsx(components_Menu, null), Header_jsx("h2", null, "Independ\xEAncia Financeira"));
+
+/* harmony default export */ var components_Header = (Header);
+// CONCATENATED MODULE: ./src/styles/global.ts
+
+/* harmony default export */ var global = (external_styled_components_["createGlobalStyle"]`
+  * {
+    margin: 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
+    font: 400 16px Roboto, sans-serif;
+    height: 100vh;
+    padding-top: 60px;
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #000;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    background: #fff;
+  }
+  .inpt-error {
+      border: 2px solid red;
+  }
+
+  p {
+    color: #000;
+    text-align: center;
+  }
+
+#root {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sp-error {
+    color: red;
+  }
+`);
+// CONCATENATED MODULE: ./src/styles/theme.ts
+const theme = {
+  colors: {
+    background: '#fafafa',
+    text: '#000',
+    primary: '#8257e6'
+  }
+};
+/* harmony default export */ var styles_theme = (theme);
+// EXTERNAL MODULE: external "next-routes"
+var external_next_routes_ = __webpack_require__("90Kz");
+var external_next_routes_default = /*#__PURE__*/__webpack_require__.n(external_next_routes_);
+
+// CONCATENATED MODULE: ./src/pages/_app.tsx
+var _app_jsx = external_react_default.a.createElement;
+
+
+
+
+
+
+
+const MyApp = ({
+  Component,
+  pageProps
+}) => {
+  var _routes$Router$router;
+
+  return _app_jsx(external_styled_components_["ThemeProvider"], {
+    theme: styles_theme
+  }, _app_jsx(Component, pageProps), _app_jsx(global, null), ((_routes$Router$router = new external_next_routes_default.a().Router.router) === null || _routes$Router$router === void 0 ? void 0 : _routes$Router$router.asPath) !== '/login' && _app_jsx(components_Header, null));
+};
+
+/* harmony default export */ var _app = __webpack_exports__["default"] = (MyApp);
+
+/***/ }),
+
+/***/ "wmQq":
+/***/ (function(module, exports) {
+
+module.exports = require("framer-motion");
 
 /***/ })
 

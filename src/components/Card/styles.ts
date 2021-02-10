@@ -26,7 +26,7 @@ export const CardContainer = styled.li`
         }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 800px) {
 
         flex: 1 0 100%;
         max-width: 100%;

@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { useForm, Controller } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
+import Button from '@material-ui/core/Button'
+import OutlinedInput from '@material-ui/core/OutlinedInput'
+import InputAdornment from '@material-ui/core/InputAdornment'
 import { Container, Row, Column } from './styles'
 import { maskMoney } from '../../components/MaksMoney'
 import List from './components/List'
@@ -108,7 +111,7 @@ const FormCalc: React.FC = () => {
         <Row>
           <Column>
             <label>Aporte Mensal</label>
-            <h2 style={{ color: '#FFF' }}>R$ {aporteMensal}</h2>
+            <h2 style={{ color: '#000' }}>R$ {aporteMensal}</h2>
           </Column>
           <Column>
             <label>Rendimento Anual</label>
@@ -122,8 +125,19 @@ const FormCalc: React.FC = () => {
             />
           </Column>
         </Row>
-        <input type="submit" value="Calcular" />
-        <input type="button" value="Limpar" onClick={onChangeLimpar} />
+        <Row style={{ justifyContent: 'flex-end' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            style={{ marginRight: '8px' }}
+          >
+            Calcular
+          </Button>
+          <Button type="button" variant="contained" onClick={onChangeLimpar}>
+            Limpar
+          </Button>
+        </Row>
       </Container>
       {lista.length > 0 && (
         <>
