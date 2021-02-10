@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from 'react';\nimport Form from '../components/FormCalc';\nimport { Container } from '../styles/pages/FormCalc';\n\nvar FormCalc = function FormCalc() {\n  return __jsx(Container, null, __jsx(Form, null));\n};\n\nexport default FormCalc;","map":null,"metadata":{},"sourceType":"module"}

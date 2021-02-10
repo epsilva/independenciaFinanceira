@@ -26,7 +26,7 @@ const sidebar = {
   }
 }
 
-const Menu: React.FC<Styled> = () => {
+const Menu: React.FC = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
   const containerRef = useRef(null)
   const { height } = useDimensions(containerRef)
