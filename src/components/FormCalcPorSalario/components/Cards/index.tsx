@@ -92,7 +92,7 @@ const Cards: React.FC<Props> = ({ lista }: Props) => {
         </p>
       </CardDetail>
       <CardDetail>
-        <h2>Em 30 ano</h2>
+        <h2>Em 30 anos</h2>
         <p>
           Rendimento Mensal: <strong>{trinta?.totalRendimento}</strong>
         </p>

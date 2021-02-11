@@ -13,6 +13,10 @@ body {
     font: 400 16px Roboto, sans-serif;
     height: 100vh;
     padding-top: 60px;
+
+    h1, h2, h3, h4, h5, h5, p {
+      color: #212529
+    }
 }
 
 input {
@@ -32,7 +36,7 @@ input {
   }
 
   p {
-    color: #000;
+    color: #212529;
     text-align: center;
   }
 

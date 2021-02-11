@@ -47,14 +47,10 @@ const FormCalc: React.FC = () => {
         variant="fullWidth"
       >
         <Tab label="Independênia" />
-        <Tab label="Juros Compostos" />
       </Tabs>
       <>
         <TabPanel value={value} index={0}>
           <FormCalcPorSalario />
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
         </TabPanel>
       </>
     </Container>

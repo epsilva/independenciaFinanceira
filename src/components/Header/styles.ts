@@ -11,7 +11,6 @@ export const HeaderContainer = styled.header`
   width: 100%;
   border-radius: 0px;
   background: #4154b3;
-  box-shadow: 1px 1px 8px #000;
 
   h2 {
     margin-left: 60px;

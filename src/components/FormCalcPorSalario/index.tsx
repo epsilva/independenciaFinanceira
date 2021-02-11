@@ -11,10 +11,12 @@ import TextField from '@material-ui/core/TextField'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import TrendingUpIcon from '@material-ui/icons/TrendingUp'
 import MoneyIcon from '@material-ui/icons/Money'
+import Info from '../Info'
 
 const FormCalcPorSalario: React.FC = () => {
   const [lista, setLista] = useState<IStateLista[]>([])
   const [aporteMensal, setAporteMensal] = useState('0,00')
+  const [showModal, setShowModal] = useState(true)
   const {
     handleSubmit,
     register,
@@ -102,11 +104,23 @@ const FormCalcPorSalario: React.FC = () => {
 
   useEffect(() => {
     onChangeLimpar()
+    setShowModal(localStorage.getItem('showInfoIndependencia') === null)
   }, [])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
+        {showModal && (
+          <Info parent="showInfoIndependencia">
+            <h1>Aviso!</h1>
+            <h3>Esta calculadora fará uma simulação de 30 anos.</h3>
+            <p>
+              Você colocará seus ganhos mensais (Salário Mensal) e o percentual
+              que você economizará (Percentual do Aporte) para ter a renda que
+              você já recebe e o rendimento anual esperado (Rendimento Anual).
+            </p>
+          </Info>
+        )}
         <Row>
           <Column>
             <Controller

@@ -23,7 +23,8 @@ export interface IStateLista {
   aporteFinal: number
 }
 export interface Styled {
-  openNav: boolean
+  openNav?: boolean
+  showModal?: boolean
 }
 
 export interface IStateDetalhe {
