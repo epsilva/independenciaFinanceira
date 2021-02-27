@@ -4,6 +4,7 @@ import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import FormCalcPorSalario from '../components/FormCalcPorSalario'
+import FormCalcJurosCompostos from '../components/FormCalcJurosCompostos'
 import { Container } from '../styles/pages/FormCalc'
 
 interface TabPanelProps {
@@ -47,10 +48,14 @@ const FormCalc: React.FC = () => {
         variant="fullWidth"
       >
         <Tab label="Independênia" />
+        <Tab label="Juros Compostos" />
       </Tabs>
       <>
         <TabPanel value={value} index={0}>
           <FormCalcPorSalario />
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <FormCalcJurosCompostos />
         </TabPanel>
       </>
     </Container>

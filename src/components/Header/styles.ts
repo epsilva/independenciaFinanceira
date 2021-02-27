@@ -7,12 +7,13 @@ export const HeaderContainer = styled.header`
   height: 80px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   top: 0;
   width: 100%;
   border-radius: 0px;
   background: #4154b3;
 
-  h2 {
+  h3 {
     margin-left: 60px;
     color: #fff;
   }

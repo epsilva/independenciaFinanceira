@@ -25,11 +25,11 @@ const itemIds = [
   {
     id: 1,
     rota: '/',
-    titulo: 'Home'
+    titulo: 'Página Inicial'
   },
   {
     id: 2,
     rota: '/formcalc',
-    titulo: 'Independência Financeira'
+    titulo: 'Calculadoras'
   }
 ]

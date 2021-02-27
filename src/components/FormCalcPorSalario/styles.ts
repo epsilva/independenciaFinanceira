@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Styled } from '../types'
 
 export const Container = styled.div`
   padding: 12px;
@@ -31,4 +32,9 @@ export const Column = styled.div`
       font-size: 14px;
     }
   }
+`
+
+export const HideShow = styled.div<Styled>`
+  width: 100%;
+  visibility: ${props => (props.show ? 'initial' : 'collapse')};
 `

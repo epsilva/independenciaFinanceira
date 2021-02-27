@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 import { Styled } from '../types'
 import { Container, Card, ContainerButton } from './styles'
 
-function Info({ children, parent: string }) {
+function Info({ children }) {
   const [styled, setStyled] = useState<Styled>({
     showModal: true
   })
@@ -14,7 +14,7 @@ function Info({ children, parent: string }) {
 
   function closeModal() {
     if (check) {
-      localStorage.setItem(parent.toString(), 'true')
+      localStorage.setItem(window.location.pathname, 'true')
     }
     setStyled({ showModal: false })
   }

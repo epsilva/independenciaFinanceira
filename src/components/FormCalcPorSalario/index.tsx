@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { useForm, Controller } from 'react-hook-form'
 import Button from '@material-ui/core/Button'
-import { Container, Row, Column } from './styles'
+import { Container, Row, Column, HideShow } from './styles'
 import { maskMoney } from '../MaksMoney'
 import { maskDecimal } from '../MaskDecimal'
 import List from './components/List'
 import Cards from './components/Cards'
-import { IStateLista, IFormInput } from '../types'
+import { IStateLista, IFormInput, IOptionsCharts } from '../types'
 import TextField from '@material-ui/core/TextField'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import TrendingUpIcon from '@material-ui/icons/TrendingUp'
 import MoneyIcon from '@material-ui/icons/Money'
 import Info from '../Info'
+import LineChart from '../Charts/LineChart'
 
 const FormCalcPorSalario: React.FC = () => {
   const [lista, setLista] = useState<IStateLista[]>([])
   const [aporteMensal, setAporteMensal] = useState('0,00')
   const [showModal, setShowModal] = useState(true)
+  const [labels, setLabels] = useState<string[]>()
+  const [dataSet, setDataSet] = useState<IOptionsCharts[]>()
+  const [show, setShow] = useState<boolean>(false)
   const {
     handleSubmit,
     register,
@@ -37,8 +41,10 @@ const FormCalcPorSalario: React.FC = () => {
       data.rendimentoAnual.toString().replace(',', '.')
     )
     const redimentoMensal: number = (1 + rendimentoAnual / 100) ** (1 / 12) - 1
-    console.log(redimentoMensal)
     const listaTemp: IStateLista[] = []
+    let ano = 60
+    const labelsLine: string[] = []
+    const dataLine: string[] = []
     for (let i = 0; i < 360; i++) {
       if (i === 0) {
         listaTemp.push({
@@ -61,8 +67,41 @@ const FormCalcPorSalario: React.FC = () => {
           rendimento: rendimentoAtual,
           aporteFinal: aporteMe + listaTemp[i - 1].aporteFinal + rendimentoAtual
         })
+
+        if (ano === i + 1) {
+          labelsLine.push(`Ano ${ano / 12}`)
+          const valor =
+            aporteMe + listaTemp[i - 1].aporteFinal + rendimentoAtual
+          dataLine.push(valor.toFixed(2))
+          ano = ano + 60
+        }
       }
     }
+
+    setDataSet([
+      {
+        label: 'Evolução Patrimônial',
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: 'rgba(75,192,192,0.4)',
+        borderColor: 'rgba(75,192,192,1)',
+        borderCapStyle: 'butt',
+        borderDash: [],
+        borderDashOffset: 0.0,
+        borderJoinStyle: 'miter',
+        pointBorderColor: 'rgba(75,192,192,1)',
+        pointBackgroundColor: '#fff',
+        pointBorderWidth: 1,
+        pointHoverRadius: 5,
+        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+        pointHoverBorderColor: 'rgba(220,220,220,1)',
+        pointHoverBorderWidth: 2,
+        pointRadius: 1,
+        pointHitRadius: 10,
+        data: dataLine
+      }
+    ])
+    setLabels(labelsLine)
     setLista(listaTemp)
   }
 
@@ -104,23 +143,12 @@ const FormCalcPorSalario: React.FC = () => {
 
   useEffect(() => {
     onChangeLimpar()
-    setShowModal(localStorage.getItem('showInfoIndependencia') === null)
+    setShowModal(localStorage.getItem(window.location.pathname) === null)
   }, [])
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        {showModal && (
-          <Info parent="showInfoIndependencia">
-            <h1>Aviso!</h1>
-            <h3>Esta calculadora fará uma simulação de 30 anos.</h3>
-            <p>
-              Você colocará seus ganhos mensais (Salário Mensal) e o percentual
-              que você economizará (Percentual do Aporte) para ter a renda que
-              você já recebe e o rendimento anual esperado (Rendimento Anual).
-            </p>
-          </Info>
-        )}
         <Row>
           <Column>
             <Controller
@@ -242,7 +270,13 @@ const FormCalcPorSalario: React.FC = () => {
       {lista.length > 0 && (
         <>
           <Cards lista={lista} />
-          <List lista={lista} />
+          <LineChart labels={labels} dataSet={dataSet} />
+          <Button onClick={() => setShow(!show)}>
+            {show ? 'Esconder Detalhes' : 'Exibir Detalhes'}
+          </Button>
+          <HideShow show={show}>
+            <List lista={lista} />{' '}
+          </HideShow>
         </>
       )}
     </form>

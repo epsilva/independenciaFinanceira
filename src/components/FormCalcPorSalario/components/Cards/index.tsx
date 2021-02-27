@@ -14,7 +14,6 @@ const Cards: React.FC<Props> = ({ lista }: Props) => {
   const [trinta, setTrinta] = useState<IStateDetalhe>()
 
   useEffect(() => {
-    console.log(lista)
     if (lista.length > 0) {
       setUm({
         totalRendimento: lista[11].rendimento.toLocaleString('pt-br', {

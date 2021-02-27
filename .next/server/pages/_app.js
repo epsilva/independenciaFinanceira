@@ -93,6 +93,13 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "+rGQ":
+/***/ (function(module, exports) {
+
+module.exports = require("react-avatar");
+
+/***/ }),
+
 /***/ "/jkW":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1868,12 +1875,16 @@ var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_)
 var external_styled_components_ = __webpack_require__("Dtiu");
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
+// EXTERNAL MODULE: external "react-avatar"
+var external_react_avatar_ = __webpack_require__("+rGQ");
+var external_react_avatar_default = /*#__PURE__*/__webpack_require__.n(external_react_avatar_);
+
 // CONCATENATED MODULE: ./src/components/Header/styles.ts
 
 const HeaderContainer = external_styled_components_default.a.header.withConfig({
   displayName: "styles__HeaderContainer",
   componentId: "sc-14v2o85-0"
-})(["border-bottom:1px solid var(--divider);position:fixed;padding:0 20px;height:80px;display:flex;align-items:center;top:0;width:100%;border-radius:0px;background:#4154b3;h2{margin-left:60px;color:#fff;}.date{color:var(--secondary);font-size:14px;text-transform:uppercase;}.avatar{background:var(--divider);border-radius:50%;position:absolute;bottom:12px;right:0;overflow:hidden;margin-right:20px;}.avatar,.avatar img{width:40px;height:40px;}.imagem{height:40px;margin-right:8px;svg{fill:#fff;width:40px;height:40px;}}"]);
+})(["border-bottom:1px solid var(--divider);position:fixed;padding:0 20px;height:80px;display:flex;align-items:center;justify-content:space-between;top:0;width:100%;border-radius:0px;background:#4154b3;h3{margin-left:60px;color:#fff;}.date{color:var(--secondary);font-size:14px;text-transform:uppercase;}.avatar{background:var(--divider);border-radius:50%;position:absolute;bottom:12px;right:0;overflow:hidden;margin-right:20px;}.avatar,.avatar img{width:40px;height:40px;}.imagem{height:40px;margin-right:8px;svg{fill:#fff;width:40px;height:40px;}}"]);
 // EXTERNAL MODULE: external "framer-motion"
 var external_framer_motion_ = __webpack_require__("wmQq");
 
@@ -2067,11 +2078,11 @@ const Navigation = ({
 const itemIds = [{
   id: 1,
   rota: '/',
-  titulo: 'Home'
+  titulo: 'Página Inicial'
 }, {
   id: 2,
   rota: '/formcalc',
-  titulo: 'Independência Financeira'
+  titulo: 'Calculadoras'
 }];
 // CONCATENATED MODULE: ./src/components/Menu/index.tsx
 var Menu_jsx = external_react_default.a.createElement;
@@ -2143,13 +2154,48 @@ const Menu = () => {
 };
 
 /* harmony default export */ var components_Menu = (Menu);
+// EXTERNAL MODULE: external "axios"
+var external_axios_ = __webpack_require__("zr5I");
+var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_);
+
 // CONCATENATED MODULE: ./src/components/Header/index.tsx
-var Header_jsx = external_react_["createElement"];
+var Header_jsx = external_react_default.a.createElement;
 
 
 
 
-const Header = () => Header_jsx(HeaderContainer, null, Header_jsx(components_Menu, null), Header_jsx("h2", null, "Independ\xEAncia Financeira"));
+
+
+function Header() {
+  const {
+    0: user,
+    1: setUser
+  } = Object(external_react_["useState"])();
+  Object(external_react_["useEffect"])(() => {
+    async function load() {
+      const {
+        data
+      } = await external_axios_default.a.get('https://api.github.com/users/epsilva');
+      setUser({
+        avatar: data.avatar_url,
+        url: data.html_url,
+        name: data.name
+      });
+    }
+
+    load();
+  }, []);
+  return Header_jsx(HeaderContainer, null, Header_jsx(external_react_default.a.Fragment, null, Header_jsx(components_Menu, null), Header_jsx("h3", null, "Ferramentas do Investidor")), Header_jsx("a", {
+    href: user === null || user === void 0 ? void 0 : user.url,
+    target: "_blank"
+  }, Header_jsx(external_react_avatar_default.a, {
+    size: "60",
+    name: (user === null || user === void 0 ? void 0 : user.name) || 'Esdras Pinheiro',
+    src: user === null || user === void 0 ? void 0 : user.avatar,
+    round: true,
+    initials: "2"
+  })));
+}
 
 /* harmony default export */ var components_Header = (Header);
 // CONCATENATED MODULE: ./src/styles/global.ts
@@ -2405,6 +2451,13 @@ function makePublicRouterInstance(router) {
 /***/ (function(module, exports) {
 
 module.exports = require("framer-motion");
+
+/***/ }),
+
+/***/ "zr5I":
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
 
 /***/ })
 
