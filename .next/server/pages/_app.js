@@ -206,6 +206,13 @@ function assign(target, ...searchParamsList) {
 
 /***/ }),
 
+/***/ "4Q3z":
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
+
+/***/ }),
+
 /***/ "6D7l":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -398,13 +405,6 @@ module.exports = _interopRequireWildcard;
 
 /***/ }),
 
-/***/ "90Kz":
-/***/ (function(module, exports) {
-
-module.exports = require("next-routes");
-
-/***/ }),
-
 /***/ "AroE":
 /***/ (function(module, exports) {
 
@@ -445,6 +445,36 @@ module.exports = _typeof;
 /***/ (function(module, exports) {
 
 module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ "M09o":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GA_TRACKING_ID; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return pageview; });
+/* unused harmony export event */
+const GA_TRACKING_ID = 'G-REJ3VPCC3Q'; // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
+
+const pageview = url => {
+  window.gtag('config', GA_TRACKING_ID, {
+    page_path: url
+  });
+}; // https://developers.google.com/analytics/devguides/collection/gtagjs/events
+
+const event = ({
+  action,
+  category,
+  label,
+  value
+}) => {
+  window.gtag('event', action, {
+    event_category: category,
+    event_label: label,
+    value: value
+  });
+};
 
 /***/ }),
 
@@ -1871,6 +1901,9 @@ __webpack_require__.r(__webpack_exports__);
 var external_react_ = __webpack_require__("cDcd");
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__("4Q3z");
+
 // EXTERNAL MODULE: external "styled-components"
 var external_styled_components_ = __webpack_require__("Dtiu");
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
@@ -2258,12 +2291,12 @@ const theme = {
   }
 };
 /* harmony default export */ var styles_theme = (theme);
-// EXTERNAL MODULE: external "next-routes"
-var external_next_routes_ = __webpack_require__("90Kz");
-var external_next_routes_default = /*#__PURE__*/__webpack_require__.n(external_next_routes_);
+// EXTERNAL MODULE: ./lib/gtag.js
+var gtag = __webpack_require__("M09o");
 
 // CONCATENATED MODULE: ./src/pages/_app.tsx
 var _app_jsx = external_react_default.a.createElement;
+
 
 
 
@@ -2275,11 +2308,20 @@ const MyApp = ({
   Component,
   pageProps
 }) => {
-  var _routes$Router$router;
+  const router = Object(router_["useRouter"])();
+  Object(external_react_["useEffect"])(() => {
+    const handleRouteChange = url => {
+      gtag["b" /* pageview */](url);
+    };
 
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
   return _app_jsx(external_styled_components_["ThemeProvider"], {
     theme: styles_theme
-  }, _app_jsx(Component, pageProps), _app_jsx(global, null), ((_routes$Router$router = new external_next_routes_default.a().Router.router) === null || _routes$Router$router === void 0 ? void 0 : _routes$Router$router.asPath) !== '/login' && _app_jsx(components_Header, null));
+  }, _app_jsx(Component, pageProps), _app_jsx(global, null), _app_jsx(components_Header, null));
 };
 
 /* harmony default export */ var _app = __webpack_exports__["default"] = (MyApp);
