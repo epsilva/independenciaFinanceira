@@ -9,9 +9,10 @@ import TextField from '@material-ui/core/TextField'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import TrendingUpIcon from '@material-ui/icons/TrendingUp'
 import DateRange from '@material-ui/icons/DateRange'
-import Info from '../Info'
 import Card from './components/Card'
 import LineChart from '../Charts/LineChart'
+import Info from '@material-ui/icons/Info'
+import Tooltip from '@material-ui/core/Tooltip'
 
 const FormCalcJurosCompostos: React.FC = () => {
   const [lista, setLista] = useState([])
@@ -156,17 +157,6 @@ const FormCalcJurosCompostos: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Container>
-        {showModal && (
-          <Info>
-            <h1>Aviso!</h1>
-            <h3>Esta calculadora fará uma simulação de 30 anos.</h3>
-            <p>
-              Você colocará seus ganhos mensais (Salário Mensal) e o percentual
-              que você economizará (Percentual do Aporte) para ter a renda que
-              você já recebe e o rendimento anual esperado (Rendimento Anual).
-            </p>
-          </Info>
-        )}
         <Row>
           <Column>
             <Controller
@@ -178,8 +168,17 @@ const FormCalcJurosCompostos: React.FC = () => {
                   id="standard-basic"
                   size="small"
                   fullWidth
-                  label="Aporte Inicial"
-                  placeholder="0,00"
+                  label={
+                    <Row>
+                      Valor Inicial{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado o valor incial que será usado nas suas aplicações">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
+                  placeholder="5.000,00"
                   onChange={onChangeValorInicial}
                   inputRef={register({
                     required: 'Campo obrigatório'
@@ -202,8 +201,17 @@ const FormCalcJurosCompostos: React.FC = () => {
                 <TextField
                   error={errors.valorMensal !== undefined}
                   id="standard-basic"
-                  label="Aporte Mensal"
-                  placeholder="0,00"
+                  label={
+                    <Row>
+                      Valor Mensal{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado o valor que será aplicado mensalmento">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
+                  placeholder="500,00"
                   size="small"
                   fullWidth
                   onChange={onChangeValorMensal}
@@ -232,8 +240,17 @@ const FormCalcJurosCompostos: React.FC = () => {
                 <TextField
                   error={errors.taxaJuros !== undefined}
                   id="standard-basic"
-                  label="Taxa Juros Mensal"
-                  placeholder="100%"
+                  label={
+                    <Row>
+                      Taxa Juros Mensal{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado a taxa de juros que suas aplicações está rendendo por mês">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
+                  placeholder="0,65%"
                   onChange={onChangeTaxaJuros}
                   inputRef={register({
                     required: 'Campo obrigatório',
@@ -265,7 +282,16 @@ const FormCalcJurosCompostos: React.FC = () => {
                 <TextField
                   error={errors.tempoMeses !== undefined}
                   id="standard-basic"
-                  label="Tempo em meses"
+                  label={
+                    <Row>
+                      Tempo em Meses{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado o tempo que que desejas manter seus investimentos">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
                   placeholder="360"
                   inputRef={register({
                     required: 'Campo obrigatório',

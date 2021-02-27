@@ -1,9 +1,7 @@
 {
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/formcalc": "pages/formcalc.html",
-  "/": "pages/index.html",
-  "/login": "pages/login.html",
   "/_error": "pages/_error.js",
-  "/404": "pages/404.html"
+  "/formcalc": "pages/formcalc.js",
+  "/": "pages/index.js"
 }

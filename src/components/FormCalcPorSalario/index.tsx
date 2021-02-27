@@ -11,8 +11,9 @@ import TextField from '@material-ui/core/TextField'
 import InputAdornment from '@material-ui/core/InputAdornment'
 import TrendingUpIcon from '@material-ui/icons/TrendingUp'
 import MoneyIcon from '@material-ui/icons/Money'
-import Info from '../Info'
+import Info from '@material-ui/icons/Info'
 import LineChart from '../Charts/LineChart'
+import Tooltip from '@material-ui/core/Tooltip'
 
 const FormCalcPorSalario: React.FC = () => {
   const [lista, setLista] = useState<IStateLista[]>([])
@@ -160,9 +161,18 @@ const FormCalcPorSalario: React.FC = () => {
                   id="standard-basic"
                   size="small"
                   fullWidth
-                  label="Salário Mensal"
+                  label={
+                    <Row>
+                      Salário Mensal{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado a sua renda mensal">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
                   onChange={onChangeRemunaration}
-                  placeholder="0,00"
+                  placeholder="3.000,00"
                   inputRef={register({
                     required: 'Campo obrigatório'
                   })}
@@ -184,9 +194,18 @@ const FormCalcPorSalario: React.FC = () => {
                 <TextField
                   error={errors.percentualAporte !== undefined}
                   id="standard-basic"
-                  label="Percentual do Aporte"
+                  label={
+                    <Row>
+                      Valor Mensal{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado a percentagem do quanto deseja reservar do seu salário para aplicar mensalmente">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
                   onChange={calcAporteMensal}
-                  placeholder="100%"
+                  placeholder="20%"
                   size="small"
                   fullWidth
                   inputRef={register({
@@ -222,9 +241,18 @@ const FormCalcPorSalario: React.FC = () => {
                 <TextField
                   error={errors.rendimentoAnual !== undefined}
                   id="standard-basic"
-                  label="Rendimento Anual"
+                  label={
+                    <Row>
+                      Rendimento Anual{' '}
+                      <InputAdornment position="end">
+                        <Tooltip title="Aqui será informado o redimento anual de suas aplicações">
+                          <Info />
+                        </Tooltip>
+                      </InputAdornment>
+                    </Row>
+                  }
                   onChange={calcAporteMensal}
-                  placeholder="100%"
+                  placeholder="8,65%"
                   inputRef={register({
                     required: 'Campo obrigatório',
                     maxLength: 6

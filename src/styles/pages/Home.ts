@@ -7,10 +7,9 @@ export const Container = styled.div`
   padding: 60px 8px;
   display: flex;
   flex-direction: column;
-  /* height: 92vh; */
+  height: 92vh;
   position: relative;
   background: #fff;
-  /* background-image: url(${back}); */
   background-repeat: no-repeat;
   background-origin: initial;
   transform: scaleX(1);
@@ -18,7 +17,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 900px) {
     background-image: none;
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
   h1 {
@@ -29,25 +28,6 @@ export const Container = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.13em;
   }
-
-  /* div {
-    margin-left: 80%;
-    margin-top: 25%;
-    padding: 15px;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-
-    @media only screen and (max-width: 900px) {
-      margin-top: 25%;
-      margin-left: 0%;  
-      background: #fff;
-    }
-
-    a {
-      text-decoration: none;
-    }
-  } */
 `
 
 export const DivPage = styled.div`
@@ -58,17 +38,18 @@ export const DivPage = styled.div`
   justify-content: center;
   background: #6a66f4;
   color: #fff;
-  margin-top: 10%;
+  margin-top: 20%;
+  margin-bottom: 20px;
 `
 export const Card = styled.div`
   padding: 20px;
-  -webkit-box-shadow: 0px 10px 13px -7px #000000;
+  box-shadow: 0px 10px 13px -7px #000000;
   height: 120px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 20%;
+  width: 12%;
   @media only screen and (max-width: 900px) {
     width: 100%;
   }

@@ -3,6 +3,7 @@ import Avatar from 'react-avatar'
 import { HeaderContainer } from './styles'
 import Menu from '../Menu'
 import axios from 'axios'
+import Tooltip from '@material-ui/core/Tooltip'
 
 interface User {
   name: string
@@ -32,15 +33,17 @@ function Header() {
         <Menu />
         <h3>Ferramentas do Investidor</h3>
       </>
-      <a href={user?.url} target="_blank">
-        <Avatar
-          size="60"
-          name={user?.name || 'Esdras Pinheiro'}
-          src={user?.avatar}
-          round
-          initials="2"
-        />
-      </a>
+      <Tooltip title="Entre em contato">
+        <a href={user?.url} target="_blank">
+          <Avatar
+            size="60"
+            name={user?.name || 'Esdras Pinheiro'}
+            src={user?.avatar}
+            round
+            initials="2"
+          />
+        </a>
+      </Tooltip>
     </HeaderContainer>
   )
 }
