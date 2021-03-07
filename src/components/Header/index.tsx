@@ -33,7 +33,7 @@ function Header() {
       <>
         {/* <Menu /> */}
         <Link href="/">
-          <h3>Ferramentas do Investidor</h3>
+          <h3>Quero Investir</h3>
         </Link>
       </>
       {/* <Tooltip title="Entre em contato">

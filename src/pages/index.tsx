@@ -9,8 +9,9 @@ import {
   ContainerDesc,
   CardDesc
 } from '../styles/pages/Home'
-import { Button } from '@material-ui/core'
 import Link from 'next/link'
+import Lottie from 'react-lottie'
+import animationData from '../assets/scroll-down.json'
 
 interface Parceiro {
   avatar: string
@@ -19,6 +20,14 @@ interface Parceiro {
 }
 
 const Home: React.FC = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
   const [parceiro, setParceiro] = useState<Parceiro>()
   useEffect(() => {
     document.getElementById('header').style.background = 'transparent'
@@ -46,6 +55,7 @@ const Home: React.FC = () => {
   return (
     <Container id="main" onScroll={scrollFunction}>
       <ContainerIntro>
+        <span className="descricao">Você quer investir?</span>
         <span className="descricao">
           Aqui disponibilizamos algumas ferramentas que auxiliam simulações de
           investimentos
@@ -55,6 +65,12 @@ const Home: React.FC = () => {
             <h3>Entre e faça sua simulação.</h3>
           </Card>
         </Link>
+        <h2>
+          Em breve traremos conteúdos sobre investimentos
+          <br />
+          <br />
+          <Lottie options={defaultOptions} height={40} width={25} />
+        </h2>
       </ContainerIntro>
       <DivPage>
         <span>
@@ -78,7 +94,6 @@ const Home: React.FC = () => {
             você deseja trabalhar por toda a sua vida?
           </span>
         </CardDesc>
-
         <CardDesc>
           <strong className="title">Quando devo começar a investir?</strong>
           <span>

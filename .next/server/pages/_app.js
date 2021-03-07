@@ -1945,7 +1945,7 @@ function Header() {
     id: "header"
   }, __jsx(external_react_default.a.Fragment, null, __jsx(link_default.a, {
     href: "/"
-  }, __jsx("h3", null, "Ferramentas do Investidor"))));
+  }, __jsx("h3", null, "Quero Investir"))));
 }
 
 /* harmony default export */ var components_Header = (Header);

@@ -826,7 +826,7 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       lang: "pt"
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, __jsx("meta", {
       charSet: "utf-8"
-    }), __jsx("title", null, "Ferramentas do Investidor"), __jsx("link", {
+    }), __jsx("title", null, "Quero Investir"), __jsx("link", {
       rel: "icon",
       href: "/static/undraw_investing.png"
     }), __jsx("script", {
@@ -855,17 +855,17 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       content: "Aqui disponibilizamos algumas ferramentas que auxiliam simula\xE7\xF5es de investimentos"
     }), __jsx("meta", {
       property: "og:site_name",
-      content: "Ferramentas do Investidor"
+      content: "Quero Investir"
     }), __jsx("meta", {
       property: "og:title",
-      content: "Ferramentas do Investidor"
+      content: "Quero Investir"
     }), __jsx("meta", {
       name: "image",
       property: "og:image",
       content: "/static/undraw_investing.png"
     }), __jsx("meta", {
       property: "twitter:title",
-      content: "Ferramentas do Investidor"
+      content: "Quero Investir"
     }), __jsx("meta", {
       property: "twitter:image",
       content: "/static/undraw_investing.png"

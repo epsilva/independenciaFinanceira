@@ -70,14 +70,16 @@ export const Card = styled.div`
 export const ContainerIntro = styled.div`
   min-height: 100vh;
   max-width: 100%;
+  padding: 0 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center !important;
   align-items: center;
   background-image: url(${back});
   background-repeat: no-repeat;
   background-size: cover;
+  /* flex-direction: column; */
 
   @media only screen and (max-width: 767px) {
     span {
@@ -86,6 +88,7 @@ export const ContainerIntro = styled.div`
     background-repeat: no-repeat;
     background-position-x: center;
     background-size: 150% 100%;
+    padding: 60px 0 0 0;
   }
 
   span.descricao {
@@ -94,7 +97,19 @@ export const ContainerIntro = styled.div`
     font-family: 'Poppins', sans-serif;
     font-size: 52px;
     @media only screen and (max-width: 767px) {
-      font-size: 32px;
+      font-size: 28px;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0 30%;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 20px;
+      margin: 0 10%;
     }
   }
 `

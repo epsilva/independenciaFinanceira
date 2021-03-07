@@ -43,7 +43,7 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-          <title>Ferramentas do Investidor</title>
+          <title>Quero Investir</title>
           <link rel="icon" href="/static/undraw_investing.png" />
           <script
             async
@@ -77,15 +77,15 @@ export default class MyDocument extends Document {
             content="Aqui disponibilizamos algumas ferramentas que auxiliam simulações de
             investimentos"
           />
-          <meta property="og:site_name" content="Ferramentas do Investidor" />
-          <meta property="og:title" content="Ferramentas do Investidor" />
+          <meta property="og:site_name" content="Quero Investir" />
+          <meta property="og:title" content="Quero Investir" />
           <meta
             name="image"
             property="og:image"
             content="/static/undraw_investing.png"
           />
 
-          <meta property="twitter:title" content="Ferramentas do Investidor" />
+          <meta property="twitter:title" content="Quero Investir" />
           <meta
             property="twitter:image"
             content="/static/undraw_investing.png"
