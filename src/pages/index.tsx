@@ -47,7 +47,7 @@ const Home: React.FC = () => {
     <Container id="main" onScroll={scrollFunction}>
       <ContainerIntro>
         <span className="descricao">
-          Aqui diponibilizamos algumas ferramentas que auxiliam simulações de
+          Aqui disponibilizamos algumas ferramentas que auxiliam simulações de
           investimentos
         </span>
         <Link href="/formcalc">
