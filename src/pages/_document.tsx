@@ -43,6 +43,8 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <title>Ferramentas do Investidor</title>
+          <link rel="icon" href="/static/undraw_investing.png" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -70,7 +72,25 @@ export default class MyDocument extends Document {
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           ></script>
 
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <meta
+            property="og:description"
+            content="Aqui disponibilizamos algumas ferramentas que auxiliam simulações de
+            investimentos"
+          />
+          <meta property="og:site_name" content="Ferramentas do Investidor" />
+          <meta property="og:title" content="Ferramentas do Investidor" />
+          <meta
+            name="image"
+            property="og:image"
+            content="/static/undraw_investing.png"
+          />
+
+          <meta property="twitter:title" content="Ferramentas do Investidor" />
+          <meta
+            property="twitter:image"
+            content="/static/undraw_investing.png"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <body>
           <Main />

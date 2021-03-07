@@ -826,6 +826,9 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       lang: "pt"
     }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Head"], null, __jsx("meta", {
       charSet: "utf-8"
+    }), __jsx("title", null, "Ferramentas do Investidor"), __jsx("link", {
+      rel: "icon",
+      href: "/static/undraw_investing.png"
     }), __jsx("script", {
       async: true,
       src: `https://www.googletagmanager.com/gtag/js?id=${_lib_gtag__WEBPACK_IMPORTED_MODULE_3__[/* GA_TRACKING_ID */ "a"]}`
@@ -847,9 +850,28 @@ class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
       "data-ad-client": "ca-pub-8692876621155253",
       async: true,
       src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    }), __jsx("link", {
-      rel: "icon",
-      href: "https://rocketseat.com.br/favicon.ico"
+    }), __jsx("meta", {
+      property: "og:description",
+      content: "Aqui disponibilizamos algumas ferramentas que auxiliam simula\xE7\xF5es de investimentos"
+    }), __jsx("meta", {
+      property: "og:site_name",
+      content: "Ferramentas do Investidor"
+    }), __jsx("meta", {
+      property: "og:title",
+      content: "Ferramentas do Investidor"
+    }), __jsx("meta", {
+      name: "image",
+      property: "og:image",
+      content: "/static/undraw_investing.png"
+    }), __jsx("meta", {
+      property: "twitter:title",
+      content: "Ferramentas do Investidor"
+    }), __jsx("meta", {
+      property: "twitter:image",
+      content: "/static/undraw_investing.png"
+    }), __jsx("meta", {
+      name: "twitter:card",
+      content: "summary_large_image"
     })), __jsx("body", null, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], null), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], null)));
   }
 
