@@ -4,6 +4,7 @@ import { HeaderContainer } from './styles'
 import Menu from '../Menu'
 import axios from 'axios'
 import Tooltip from '@material-ui/core/Tooltip'
+import { useAuth } from '../../../lib/auth'
 
 interface User {
   name: string
@@ -13,6 +14,7 @@ interface User {
 
 function Header() {
   const [user, setUser] = useState<User>()
+  const { auth } = useAuth()
 
   useEffect(() => {
     async function load() {
@@ -30,7 +32,7 @@ function Header() {
   return (
     <HeaderContainer>
       <>
-        <Menu />
+        {auth && <Menu />}
         <h3>Ferramentas do Investidor</h3>
       </>
       <Tooltip title="Entre em contato">

@@ -21,7 +21,6 @@ export const HeaderContainer = styled.header`
   .date {
     color: var(--secondary);
     font-size: 14px;
-    text-transform: uppercase;
   }
 
   .avatar {

@@ -5,11 +5,16 @@ import { ThemeProvider } from 'styled-components'
 import Header from '../components/Header'
 import GlobalStyle from '../styles/global'
 import theme from '../styles/theme'
-import routes from 'next-routes'
+import { AuthProvider } from '../../lib/auth'
 import * as gtag from '../../lib/gtag'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+import { useAuth } from '../../lib/auth'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   const router = useRouter()
+  const { auth } = useAuth()
   useEffect(() => {
     const handleRouteChange = url => {
       gtag.pageview(url)
@@ -21,11 +26,18 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   }, [router.events])
 
   return (
-    <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
-      <GlobalStyle />
-      <Header />
-    </ThemeProvider>
+    <AuthProvider>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+        <ToastContainer />
+        {auth && (
+          <>
+            <GlobalStyle />
+            <Header />
+          </>
+        )}
+      </ThemeProvider>
+    </AuthProvider>
   )
 }
 

@@ -25,7 +25,6 @@ export const Container = styled.div`
     font-family: sans-serif;
     font-weight: 600;
     font-style: normal;
-    text-transform: uppercase;
     letter-spacing: 0.13em;
   }
 `

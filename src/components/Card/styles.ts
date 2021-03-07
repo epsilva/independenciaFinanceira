@@ -85,7 +85,6 @@ export const TitleContainer = styled(motion.div)`
     .category {
         color: #fff;
         font-size: 14px;
-        text-transform: uppercase;
     }
 `;
 
