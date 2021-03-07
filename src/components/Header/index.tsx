@@ -3,6 +3,7 @@ import Avatar from 'react-avatar'
 import { HeaderContainer } from './styles'
 import Menu from '../Menu'
 import axios from 'axios'
+import Link from 'next/link'
 import Tooltip from '@material-ui/core/Tooltip'
 
 interface User {
@@ -28,12 +29,14 @@ function Header() {
   }, [])
 
   return (
-    <HeaderContainer>
+    <HeaderContainer id="header">
       <>
-        <Menu />
-        <h3>Ferramentas do Investidor</h3>
+        {/* <Menu /> */}
+        <Link href="/">
+          <h3>Ferramentas do Investidor</h3>
+        </Link>
       </>
-      <Tooltip title="Entre em contato">
+      {/* <Tooltip title="Entre em contato">
         <a href={user?.url} target="_blank">
           <Avatar
             size="60"
@@ -43,7 +46,7 @@ function Header() {
             initials="2"
           />
         </a>
-      </Tooltip>
+      </Tooltip> */}
     </HeaderContainer>
   )
 }

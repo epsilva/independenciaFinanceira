@@ -1,24 +1,18 @@
 import styled from 'styled-components'
-import back from '../../assets/undraw_investing.png'
+import back from '../../assets/wallpaper.jpg'
 
 export const Container = styled.div`
   width: 100%;
   flex: 1 1 100%;
-  padding: 60px 8px;
   display: flex;
   flex-direction: column;
-  height: 92vh;
+  overflow: auto;
+  height: 100vh;
   position: relative;
   background: #fff;
   background-repeat: no-repeat;
   background-origin: initial;
-  transform: scaleX(1);
   align-items: center;
-
-  @media only screen and (max-width: 900px) {
-    background-image: none;
-    /* align-items: flex-start; */
-  }
 
   h1 {
     font-size: 24px;
@@ -32,33 +26,107 @@ export const Container = styled.div`
 
 export const DivPage = styled.div`
   width: 100%;
-  height: 40px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #6a66f4;
+  background: #2093f7;
   color: #fff;
-  margin-top: 20%;
-  margin-bottom: 20px;
+  text-align: center !important;
+  /* margin-top: 20%;
+  margin-bottom: 20px; */
 `
 export const Card = styled.div`
   padding: 20px;
   box-shadow: 0px 10px 13px -7px #000000;
-  height: 120px;
+  height: 60px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 12%;
+  color: #fff;
+  background: #2093f7;
+  margin: 4px;
+  cursor: pointer;
+  width: 20%;
   @media only screen and (max-width: 900px) {
     width: 100%;
   }
   margin-top: 20px;
   :hover {
-    background: #d6d0d0;
+    background: #6a66f4;
   }
 
   a {
     text-decoration: none;
+  }
+  border-radius: 4px;
+
+  h3 {
+    color: #fff;
+  }
+`
+
+export const ContainerIntro = styled.div`
+  min-height: 100vh;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center !important;
+  align-items: center;
+  background-image: url(${back});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 767px) {
+    span {
+      font-size: 32px;
+    }
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: 150% 100%;
+  }
+
+  span.descricao {
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 52px;
+    @media only screen and (max-width: 767px) {
+      font-size: 32px;
+    }
+  }
+`
+
+export const ContainerDesc = styled.div`
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+
+export const CardDesc = styled.div`
+  text-align: center !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #2093f7;
+  margin: 20px;
+  border-radius: 4px;
+  padding: 20px;
+  color: #fff;
+
+  strong {
+    color: #000;
+  }
+
+  strong.title {
+    font-size: 24px;
+    margin-bottom: 8px;
   }
 `

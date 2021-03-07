@@ -12,7 +12,7 @@ body {
     color: ${props => props.theme.colors.text};
     font: 400 16px Roboto, sans-serif;
     height: 100vh;
-    padding-top: 60px;
+    overflow: auto;
 
     h1, h2, h3, h4, h5, h5, p {
       color: #212529

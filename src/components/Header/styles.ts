@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.header`
   border-bottom: 1px solid var(--divider);
   position: fixed;
-  padding: 0 20px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -11,11 +10,13 @@ export const HeaderContainer = styled.header`
   top: 0;
   width: 100%;
   border-radius: 0px;
-  background: #4154b3;
+  background: #2093f7;
+  padding: 0 20px;
 
   h3 {
-    margin-left: 60px;
+    /* margin-left: 60px; */
     color: #fff;
+    cursor: pointer;
   }
 
   .date {

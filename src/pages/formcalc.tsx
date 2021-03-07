@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Typography from '@material-ui/core/Typography'
@@ -37,6 +37,10 @@ const FormCalc: React.FC = () => {
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue)
   }
+
+  useEffect(() => {
+    document.getElementById('header').style.background = '#2093f7'
+  }, [])
   return (
     <Container>
       <Tabs

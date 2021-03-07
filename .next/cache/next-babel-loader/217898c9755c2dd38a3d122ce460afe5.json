@@ -1,0 +1,1 @@
+{"ast":null,"code":"var theme = {\n  colors: {\n    background: '#fafafa',\n    text: '#000',\n    primary: '#8257e6'\n  }\n};\nexport default theme;","map":null,"metadata":{},"sourceType":"module"}
