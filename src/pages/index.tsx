@@ -110,7 +110,7 @@ const Home: React.FC = () => {
           </span>
           <br />
           <span>
-            <strong>Eai, ai quer depender do governo?</strong>
+            <strong>Eai, vai querer depender do governo?</strong>
           </span>
         </CardDesc>
       </ContainerDesc>
