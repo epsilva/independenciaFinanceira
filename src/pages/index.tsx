@@ -7,11 +7,16 @@ import {
   Card,
   ContainerIntro,
   ContainerDesc,
-  CardDesc
+  CardDesc,
+  ContainerDesc2Column,
+  CardText
 } from '../styles/pages/Home'
 import Link from 'next/link'
 import Lottie from 'react-lottie'
 import animationData from '../assets/scroll-down.json'
+import grafico from '../assets/grafico.json'
+import corretora from '../assets/corretora.json'
+import duvida from '../assets/duvida.json'
 
 interface Parceiro {
   avatar: string
@@ -24,6 +29,33 @@ const Home: React.FC = () => {
     loop: true,
     autoplay: true,
     animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
+  const graficoOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: grafico,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
+  const corretoraOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: corretora,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  }
+
+  const duvidaOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: duvida,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -129,6 +161,74 @@ const Home: React.FC = () => {
           </span>
         </CardDesc>
       </ContainerDesc>
+      <DivPage>
+        <span>
+          Se você chegou até aqui, PARABÉNS, você tem interesse em mudar de
+          vida.
+        </span>
+      </DivPage>
+      <ContainerDesc2Column>
+        <Lottie options={graficoOptions} />
+        <CardText>
+          <h2>Como investir na Bolsa de Valores?</h2>
+          <br />
+          <h3>
+            Bom, o primeiro passo e mais importante é começar a poupar recursos
+            financeiros. Adote este hábito e comece a fazer um controle
+            financeiro, saiba o quanto você ganha e o quanto gasta e com o que
+            gasta, e reveja esses seus gastos e corte o que você entende como
+            não essencial para sua vida ou para sua família. O segundo passo é
+            abrir uma conta em alguma corretora.
+          </h3>
+          <br />
+          <strong>
+            **Mas não precisa passar vontade, poupar não significa não
+            aproveitar a vida.
+          </strong>
+        </CardText>
+        <CardText>
+          <h2>E como eu encontro uma corretora?</h2>
+          <br />
+          <h3>
+            Hoje em dia com a modernização de boa parte dos serviços e da
+            popularização dos bancos digitáis, ficou muito mais fácil encontrar
+            uma corretora que se encaixe no seu perfil. Analise alguns ítens das
+            corretoras que está pesquisando.
+            <br />
+            <br />
+            <div className="text-left">
+              <span>
+                1 - Veja se esta oferece uma boa plataforma para operar
+              </span>
+              <br />
+              <span>
+                2 - Quanto cobra pela taxa de corretagem (Hoje existem muitas
+                que não cobram por este serviço.)
+              </span>
+              <br />
+              <span>
+                3 - Que ofereça uma quantidade aceitável de produtos e com
+                qualidade.
+              </span>
+              <br />
+              <span>4 - E que esta possua as certificações da B3</span>
+            </div>
+          </h3>
+          <br />
+        </CardText>
+        <Lottie options={corretoraOptions} />
+        <Lottie options={duvidaOptions} />
+        <CardText>
+          <h2>E agora o que fazer?</h2>
+          <br />
+          <h3>
+            Existem diversos tipos de investimentos que você pode fazer. Tesouro
+            Direto, CDB, LCA e LCI, Acões de Empresas, Fundos de Investimentos
+            entre outros. iremos detalhar cada um deles em breve...
+          </h3>
+          <br />
+        </CardText>
+      </ContainerDesc2Column>
 
       {/* <DivPage>Parceiros</DivPage>
       <a href="https://tetofii.vercel.app" target="_blank">

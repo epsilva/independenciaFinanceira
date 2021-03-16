@@ -14,6 +14,10 @@ export const Container = styled.div`
   background-origin: initial;
   align-items: center;
 
+  .text-left {
+    text-align: left;
+  }
+
   h1 {
     font-size: 24px;
     font-family: sans-serif;
@@ -124,6 +128,17 @@ export const ContainerDesc = styled.div`
   }
 `
 
+export const ContainerDesc2Column = styled.div`
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
+
 export const CardDesc = styled.div`
   text-align: center !important;
   display: flex;
@@ -143,5 +158,18 @@ export const CardDesc = styled.div`
   strong.title {
     font-size: 24px;
     margin-bottom: 8px;
+  }
+`
+
+export const CardText = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+
+  @media only screen and (max-width: 767px) {
+    padding: 20px;
   }
 `
